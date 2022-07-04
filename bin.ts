@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-import { program } from 'commander'
-import { createBuild, createDev } from '@vuepress/cli'
-
 import { homedir } from 'node:os'
 import { resolve } from 'node:path'
 
-import vuepressConfig from '../config'
+import { program } from 'commander'
+import { createBuild, createDev } from '@vuepress/cli'
+
+import vuepressConfig from './config'
 
 const PKG = module.require('../package.json')
 

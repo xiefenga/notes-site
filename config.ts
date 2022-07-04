@@ -3,7 +3,6 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { searchPlugin } from '@vuepress/plugin-search'
 import indexPlugin from './pulgins/vuepress-plugin-index'
 import titlePulgin from './pulgins/vuepress-plugin-title'
-// import preparePlugin from './pulgins/vuepress-plugin-prepare'
 
 import { resolve } from 'node:path'
 
@@ -21,7 +20,6 @@ const sitePage = {
 
 const plugins = [
   searchPlugin(),
-  // preparePlugin(),
   titlePulgin(),
   indexPlugin(),
 ]
