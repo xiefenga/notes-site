@@ -5,6 +5,8 @@ import indexPlugin from './pulgins/vuepress-plugin-index'
 import titlePulgin from './pulgins/vuepress-plugin-title'
 // import preparePlugin from './pulgins/vuepress-plugin-prepare'
 
+import { resolve } from 'node:path'
+
 import { localTheme } from './theme'
 
 const theme = localTheme()
@@ -29,9 +31,9 @@ export default defineUserConfig({
   bundler,
   plugins,
   ...sitePage,
-  dest: 'dist',
-  public: 'public',
-  temp: '.vuepress/.temp',
-  cache: '.vuepress/.cache',
+  dest: resolve(__dirname, 'dist'),
+  public: resolve(__dirname, 'public'),
+  temp: resolve(__dirname, '.vuepress/.temp'),
+  cache: resolve(__dirname, '.vuepress/.cache'),
 })
 

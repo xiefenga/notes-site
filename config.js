@@ -9,6 +9,7 @@ const plugin_search_1 = require("@vuepress/plugin-search");
 const vuepress_plugin_index_1 = __importDefault(require("./pulgins/vuepress-plugin-index"));
 const vuepress_plugin_title_1 = __importDefault(require("./pulgins/vuepress-plugin-title"));
 // import preparePlugin from './pulgins/vuepress-plugin-prepare'
+const node_path_1 = require("node:path");
 const theme_1 = require("./theme");
 const theme = (0, theme_1.localTheme)();
 const bundler = (0, bundler_vite_1.viteBundler)();
@@ -28,8 +29,8 @@ exports.default = (0, vuepress_1.defineUserConfig)({
     bundler,
     plugins,
     ...sitePage,
-    dest: 'dist',
-    public: 'public',
-    temp: '.vuepress/.temp',
-    cache: '.vuepress/.cache',
+    dest: (0, node_path_1.resolve)(__dirname, 'dist'),
+    public: (0, node_path_1.resolve)(__dirname, 'public'),
+    temp: (0, node_path_1.resolve)(__dirname, '.vuepress/.temp'),
+    cache: (0, node_path_1.resolve)(__dirname, '.vuepress/.cache'),
 });
