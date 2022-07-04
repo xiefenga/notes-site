@@ -1,6 +1,6 @@
 {
   "name": "@0x1461a0/notes-site",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "bin": {
     "notes": "./bin.js"
@@ -9,8 +9,7 @@
     "*"
   ],
   "scripts": {
-    "docs:dev": "vuepress dev /Users/xiefeng/NOTES的副本 --config config.ts",
-    "docs:build": "vuepress build /Users/xiefeng/NOTES的副本 --config config.ts"
+    "build": "tsc"
   },
   "dependencies": {
     "commander": "^9.3.0",
