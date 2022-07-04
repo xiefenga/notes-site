@@ -8,7 +8,7 @@ import { createBuild, createDev } from '@vuepress/cli'
 
 import vuepressConfig from './config'
 
-const PKG = module.require('../package.json')
+const PKG = module.require('./package.json')
 
 const loadConfig = () => {
   try {
